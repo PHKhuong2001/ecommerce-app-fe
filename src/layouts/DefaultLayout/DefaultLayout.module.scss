@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: var(--container-width);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  height: 2000px;
+  margin-left: auto;
+}

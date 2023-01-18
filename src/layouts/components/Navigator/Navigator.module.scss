@@ -1,0 +1,57 @@
+@mixin padMarContent() {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin paddingContent {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.nav {
+  .active {
+    color: #0089ff;
+  }
+  width: 100%;
+  height: var(--height-navigator);
+  line-height: var(--height-navigator);
+  border-top: solid 1px #ebebeb;
+  &-container {
+    @include padMarContent();
+  }
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+  }
+  .col-11 {
+    width: 91.66666667%;
+    @include paddingContent();
+    display: flex;
+    align-items: center;
+  }
+  .col-1 {
+    width: 8.33333333%;
+    @include paddingContent();
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  &-menu {
+    height: 55px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    &-container {
+      width: var(--container-width);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+}

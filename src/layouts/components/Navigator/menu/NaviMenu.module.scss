@@ -1,0 +1,41 @@
+.menu {
+  &-list {
+    text-align: left;
+    line-height: 50px;
+    display: flex;
+    width: 100%;
+  }
+  &-item {
+    position: relative;
+    background: transparent;
+    padding: 0px 0px;
+    z-index: 3;
+    margin-right: 4px;
+    &.active &-link {
+      color: #0089ff;
+    }
+    &-link {
+      color: #333;
+      font-family: var(--font-family);
+      padding: 0px 15px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      position: relative;
+      text-transform: uppercase;
+      &:hover {
+        color: #0089ff;
+      }
+    }
+    &:nth-child(4) {
+      background: #cacaca;
+      margin-right: 3px;
+    }
+    &:nth-child(5) {
+      background: #ed1c24;
+    }
+    .icon {
+      margin-left: 3px;
+      height: 1.3rem;
+    }
+  }
+}
