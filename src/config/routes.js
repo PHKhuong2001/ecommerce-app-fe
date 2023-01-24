@@ -1,7 +1,7 @@
 const routesConfig = {
   home: '/',
   contact: '/contact',
-  products: '/:products',
+  products: '/collection/all',
 };
 
 export default routesConfig;

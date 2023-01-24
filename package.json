@@ -20,7 +20,11 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "tippy.js": "^6.2.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@mui/material": "^5.10.15",
+    "@mui/styled-engine": "^5.10.14",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5"
   },
   "scripts": {
     "start": "react-app-rewired start",

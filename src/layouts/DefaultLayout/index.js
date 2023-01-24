@@ -10,7 +10,7 @@ function DefaultLayout({ children }) {
       <Header />
       <Navigator />
       <div className={cx('container')}>
-        <div className={cx('content')}>{children}</div>
+        <div className={cx('row')}>{children}</div>
       </div>
       <Footer />
     </div>

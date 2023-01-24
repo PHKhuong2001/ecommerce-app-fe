@@ -1,7 +1,7 @@
 import config from '~/config';
-import Contact from '~/pages/Contact';
-import Home from '~/pages/Home';
-import Products from '~/pages/Products';
+import Contact from '~/pages/client/Contact';
+import Home from '~/pages/client/Home';
+import Products from '~/pages/client/Products';
 
 const publicRoute = [
   { path: config.routesConfig.home, component: Home },

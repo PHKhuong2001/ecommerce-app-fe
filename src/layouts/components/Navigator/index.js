@@ -3,11 +3,9 @@ import classNames from 'classnames/bind';
 import MenuList from './menu';
 import MenuItem from './menu/NavigatorItem';
 import config from '~/config';
-import { faCaretDown, faL } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import Search from '../Search';
 import CartShop from '../Cart';
-import { useEffect, useState } from 'react';
-import { keyboard } from '@testing-library/user-event/dist/keyboard';
 const cx = classNames.bind(styles);
 const MenuNav = [
   {
@@ -33,25 +31,9 @@ const MenuNav = [
   },
 ];
 function Navigator() {
-  const [breadCum, setBreadCum] = useState(false);
-  document.onkeydown = (key) => {
-    console.log(key.code);
-    if (key.code === 'F5') {
-      setBreadCum((prev) => prev);
-    }
-  };
-  const handlerBreadCum = (title) => {
-    if (title === 'HOME') {
-      setBreadCum(true);
-    } else {
-      setBreadCum(false);
-    }
-  };
   const renderNav = () => {
     return MenuNav.map((item, index) => {
-      return (
-        <MenuItem key={index} title={item.title} icon={item.icon} to={item.to} handlerBreadCum={handlerBreadCum} />
-      );
+      return <MenuItem key={index} title={item.title} icon={item.icon} to={item.to} />;
     });
   };
   return (
@@ -71,7 +53,6 @@ function Navigator() {
           </div>
         </div>
       </div>
-      {breadCum ? <div>Bread Home</div> : <div>Bread Cum</div>}
     </>
   );
 }

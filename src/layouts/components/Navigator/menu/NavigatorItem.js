@@ -4,15 +4,9 @@ import classNames from 'classnames/bind';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const cx = classNames.bind(styles);
-function MenuItem({ title, to, icon, handlerBreadCum }) {
+function MenuItem({ title, to, icon }) {
   return (
-    <NavLink
-      to={to}
-      className={(nav) => cx('menu-item', { active: nav.isActive })}
-      onClick={() => {
-        handlerBreadCum(title);
-      }}
-    >
+    <NavLink to={to} className={(nav) => cx('menu-item', { active: nav.isActive })}>
       <p className={cx('menu-item-link')}>
         {title}
         <FontAwesomeIcon icon={icon} className={cx('icon')} />
