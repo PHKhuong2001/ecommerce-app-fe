@@ -39,3 +39,36 @@
     }
   }
 }
+.nav-list {
+  display: block;
+  margin-top: 0;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  .nav-item {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 5px 0px;
+    &:hover {
+      background: #0089ff;
+    }
+    &:hover .item-link {
+      color: #fff;
+    }
+    &:not(:last-child) {
+      border-bottom: solid 1px #ebebeb;
+    }
+    .item-link {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      padding: 5px 15px 5px 10px;
+      color: #333;
+      height: 30px;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      transition: 0.5s;
+    }
+  }
+}

@@ -2,8 +2,12 @@
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
+import Card from '~/components/Card';
 const cx = classNames.bind(styles);
 function Home() {
+  const renderCard = () => {
+    return <Card />;
+  };
   return (
     <>
       <div className={cx('col-12')}>
@@ -13,7 +17,11 @@ function Home() {
           </h2>
         </div>
       </div>
-      <div className={cx('col-12')}></div>
+      <div className={cx('col-12')}>
+        <div className={cx('wrap-outstanding')}>
+          <div className={cx('row')}>{renderCard()}</div>
+        </div>
+      </div>
     </>
   );
 }

@@ -6,7 +6,13 @@
 }
 .col-12 {
   width: 100%;
+  float: left;
   @include colPadding();
+}
+.wrap-outstanding {
+  width: 100%;
+  float: left;
+  padding: 35px 0;
 }
 .title-module {
   text-align: center;
@@ -31,4 +37,9 @@
       transform: translateX(-50%);
     }
   }
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
 }

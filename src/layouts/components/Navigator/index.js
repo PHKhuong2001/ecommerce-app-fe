@@ -16,6 +16,20 @@ const MenuNav = [
     title: 'CLOTHING',
     to: '/collection/all',
     icon: faCaretDown,
+    tippy: 'tippy',
+    list: [
+      { title: 'All Items', to: config.routesConfig.allItem },
+      { title: 'Tee', to: config.routesConfig.tee },
+      { title: 'Bottom', to: config.routesConfig.bottom },
+      { title: 'Jacket', to: config.routesConfig.jacket },
+      { title: 'Hoodie', to: config.routesConfig.hoodie },
+      { title: 'Sweater', to: config.routesConfig.sweater },
+      { title: 'Cap', to: config.routesConfig.cap },
+      { title: 'Shirts', to: config.routesConfig.shirts },
+      { title: 'Accessories', to: config.routesConfig.accessories },
+      { title: 'Wash / Tie Dye', to: config.routesConfig.washTieDye },
+      { title: 'Sale', tp: config.routesConfig.sale },
+    ],
   },
   {
     title: 'CONTACT',
@@ -33,7 +47,9 @@ const MenuNav = [
 function Navigator() {
   const renderNav = () => {
     return MenuNav.map((item, index) => {
-      return <MenuItem key={index} title={item.title} icon={item.icon} to={item.to} />;
+      return (
+        <MenuItem key={index} title={item.title} icon={item.icon} to={item.to} tippy={item.tippy} list={item.list} />
+      );
     });
   };
   return (

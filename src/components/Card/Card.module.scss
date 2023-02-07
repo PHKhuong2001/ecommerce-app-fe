@@ -1,0 +1,126 @@
+@mixin colPadding() {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-3 {
+  width: 25%;
+  float: left;
+  @include colPadding();
+}
+.product-box {
+  width: 100%;
+  float: left;
+  &:hover .secondImage {
+    opacity: 1;
+  }
+}
+.product-thumbnail {
+  width: 100%;
+  float: left;
+  position: relative;
+  .image-thumb {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+    }
+    img {
+      width: auto !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transition: opactiy 800ms ease;
+    }
+    &:hover .secondImage {
+      opacity: 1;
+    }
+    &:hover .product-image:nth-child(1) {
+      opacity: 0.6;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #fdfdfd;
+      opacity: 0;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.product-info {
+  width: 100%;
+  float: left;
+  background: #fff;
+  padding: 0;
+  margin: 20px 0px 15px;
+  position: relative;
+  .product-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0 0 5px;
+    line-height: 2.4rem;
+    letter-spacing: 0.01em;
+    .product-link {
+      font-size: 1.6rem;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #333;
+      text-decoration: none;
+      transition: 0.5s;
+      &:hover {
+        color: #0089ff;
+      }
+    }
+  }
+  .product-item-price {
+    position: relative;
+    .product-price {
+      font-size: 1.6rem;
+      font-family: 'Arial', sans-serif;
+      color: #363636;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .compare-price {
+      font-size: 1.3rem;
+      color: #acacac;
+      font-family: 'Arial', sans-serif;
+      line-height: 24px;
+      font-weight: 300;
+      text-decoration: line-through;
+    }
+  }
+}
+.product-image {
+  transition: all 0.5s ease;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  &:hover {
+    opacity: 1;
+  }
+}
+.secondImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
